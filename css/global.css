@@ -1,0 +1,11 @@
+a[data-level='1'] {
+  padding-left: 0px;
+}
+
+a[data-level='2'] {
+  padding-left: 1rem;
+}
+
+a[data-level='3'] {
+  padding-left: 2rem;
+}
