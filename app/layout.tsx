@@ -1,3 +1,4 @@
+import 'css/global.css'
 import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 
@@ -49,11 +50,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  twitter: {
-    title: siteMetadata.title,
-    card: 'summary_large_image',
-    images: [siteMetadata.socialBanner],
   },
 }
 

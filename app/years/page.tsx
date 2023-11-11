@@ -8,8 +8,7 @@ export const metadata = genPageMetadata({ title: 'Years', description: 'Posts by
 
 export default async function Page() {
   const yearCounts = yearData as Record<string, number>
-  const yearKeys = Object.keys(yearCounts)
-  const sortedYears = yearKeys.sort((a, b) => b > a ? 1 : -1)
+  const yearKeys = Object.keys(yearCounts).sort((a, b) => b > a ? 1 : -1)
   return (
     <>
       <div className="flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
@@ -20,7 +19,7 @@ export default async function Page() {
         </div>
         <div className="flex max-w-xs flex-wrap">
           {yearKeys.length === 0 && 'No posts found.'}
-          {sortedYears.map((year) => {
+          {yearKeys.map((year) => {
             return (
               <div key={year} className="mb-2 mr-5 mt-2">
                 <Tag text={year} />

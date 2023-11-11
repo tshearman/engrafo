@@ -35,11 +35,9 @@ export default function TagPage({ params }: { params: { year: string } }) {
         return (new Date(Date.parse(s))).getFullYear()
     }
 
-    // Capitalize first letter and convert space to dash
     const year = params.year
-    const title = year
     const filteredPosts = allCoreContent(
         sortPosts(allBlogs.filter((post) => post.date && `${toYear(post.date)}` == year))
     )
-    return <ListLayout posts={filteredPosts} title={title} />
+    return <ListLayout posts={filteredPosts} title={year} />
 }
