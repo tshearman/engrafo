@@ -9,7 +9,6 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import TableOfContexts from '@/components/TableOfContents'
 
-
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
   year: 'numeric',
@@ -51,11 +50,11 @@ export default function PostLayout({ content, children }: LayoutProps) {
             </div>
           </header>
           <div className="grid-rows-[auto_1fr] xl:grid xl:grid-cols-4 xl:gap-x-6">
-            <div className="text-sm font-medium leading-5 xl:col-start-1 xl:row-start-2 pt-4">
+            <div className="pt-4 text-sm font-medium leading-5 xl:col-start-1 xl:row-start-2">
               {tags && (
                 <div className="py-4">
                   <details open>
-                    <summary className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 cursor-pointer">
+                    <summary className="cursor-pointer text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
                       Tags
                     </summary>
                     <div className="flex flex-wrap">
@@ -66,11 +65,11 @@ export default function PostLayout({ content, children }: LayoutProps) {
                   </details>
                 </div>
               )}
-              {(toc.length > 0) && (
+              {toc.length > 0 && (
                 <div className="py-4">
                   <div className="flex flex-wrap">
                     <details open>
-                      <summary className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 cursor-pointer">
+                      <summary className="cursor-pointer text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
                         Contents
                       </summary>
                       <TableOfContexts toc={toc} />
@@ -81,12 +80,12 @@ export default function PostLayout({ content, children }: LayoutProps) {
               <div className="py-4">
                 <div className="flex flex-wrap">
                   <details open>
-                    <summary className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 cursor-pointer">
+                    <summary className="cursor-pointer text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
                       Back
                     </summary>
                     <div>
                       <Link
-                        href={"/blog"}
+                        href={'/blog'}
                         className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                         aria-label="Back to posts"
                       >
@@ -95,7 +94,7 @@ export default function PostLayout({ content, children }: LayoutProps) {
                     </div>
                     <div>
                       <Link
-                        href={"/"}
+                        href={'/'}
                         className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                         aria-label="Back to home"
                       >

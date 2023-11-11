@@ -66,7 +66,7 @@ function createTagCount(allBlogs) {
  * Count the occurrences of all years across blog posts and write to json file
  */
 function toYear(s: string) {
-  return (new Date(Date.parse(s))).getFullYear()
+  return new Date(Date.parse(s)).getFullYear()
 }
 
 function createYearCount(allBlogs) {
@@ -168,7 +168,7 @@ export default makeSource({
         rehypeAutolinkHeadings,
         {
           properties: {
-            className: ["anchor"],
+            className: ['anchor'],
           },
         },
       ],

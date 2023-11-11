@@ -77,7 +77,7 @@ export default function ListLayoutWithTags({
 
   const yearCounts = yearData as Record<string, number>
   const yearKeys = Object.keys(yearCounts)
-  const sortedYears = yearKeys.sort((a, b) => b > a ? 1 : -1)
+  const sortedYears = yearKeys.sort((a, b) => (b > a ? 1 : -1))
 
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
 

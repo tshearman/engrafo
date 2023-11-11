@@ -24,7 +24,7 @@ export default function Home({ posts }) {
       </div>
       <div>
         <div className="flex sm:space-x-24">
-          <div className='flex flex-auto flex-wrap overflow-auto'>
+          <div className="flex·flex-auto·flex-wrap·overflow-auto">
             <div className="grid grid-cols-2 gap-6">
               {posts.length > 1 && posts.slice(1, MAX_DISPLAY).map(PostCardMinimal)}
             </div>
