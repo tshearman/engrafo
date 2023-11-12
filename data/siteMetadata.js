@@ -1,16 +1,16 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Story Games',
+  title: 'Engrafo',
   author: 'Toby Shearman',
-  headerTitle: 'Story Games',
-  description: 'A blog related to story games',
+  headerTitle: 'Engrafo',
+  description: 'Thoughts on story-telling games and table-top role-playing games.',
   language: 'en-us',
-  theme: 'light',
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  theme: 'system',
+  siteUrl: 'https://engrafo.vercel.app',
+  siteRepo: 'https://github.com/tshearman/engrafo',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'toby@shearman.io',
+  email: 'toby.shearman@gmail.com',
   github: 'https://github.com/tshearman',
   locale: 'en-US',
   analytics: {
@@ -58,28 +58,22 @@ const siteMetadata = {
       // transparent_dark, preferred_color_scheme, custom
       theme: 'light',
       // theme when dark mode
-      darkTheme: 'transparent_dark',
+      darkTheme: 'dark',
       // If the theme option above is set to 'custom`
       // please provide a link below to your custom theme css file.
       // example: https://giscus.app/themes/custom_example.css
       themeURL: '',
       // This corresponds to the `data-lang="en"` in giscus's configurations
       lang: 'en',
+      inputPosition: 'top',
+      loading: 'lazy',
     },
   },
   search: {
-    provider: 'kbar', // kbar or algolia
+    provider: 'kbar',
     kbarConfig: {
-      searchDocumentsPath: 'search.json', // path to load documents to search
+      searchDocumentsPath: 'search.json', 
     },
-    // provider: 'algolia',
-    // algoliaConfig: {
-    //   // The application ID provided by Algolia
-    //   appId: 'R2IYF7ETH7',
-    //   // Public API key: it is safe to commit it
-    //   apiKey: '599cec31baffa4868cae4e79f180729b',
-    //   indexName: 'docsearch',
-    // },
   },
 }
 

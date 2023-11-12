@@ -17,7 +17,7 @@ export default function PostCard(post: PostProps) {
     <article>
       <div className="gap-4 xl:grid xl:grid-cols-4">
         {!post.image && (
-          <div className="mb-4 min-h-[300px] border-2 border-black bg-[url('/static/images/canada/mountains.jpg')] bg-cover bg-center shadow-md shadow-black xl:col-span-1 xl:min-h-[200px]" />
+          <div className="mb-4 min-h-[300px] border-2 border-black bg-[url('/static/images/canada/mountains.jpg')] bg-cover bg-center shadow-md shadow-black dark:border-gray-400 xl:col-span-1 xl:min-h-[200px]" />
         )}
         <div className="xl:col-span-3">
           <div>
