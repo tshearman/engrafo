@@ -25,26 +25,26 @@ export default function Home({ posts }) {
       <div>
         <div className="flex sm:space-x-24">
           <div className="flex·flex-auto·flex-wrap·overflow-auto">
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6 pb-12 xl:grid-cols-2">
               {posts.length > 1 && posts.slice(1, MAX_DISPLAY).map(PostCardMinimal)}
             </div>
+            {posts.length > MAX_DISPLAY && (
+              <div className="col-span-2 flex justify-center text-base font-medium leading-6">
+                <Link
+                  href="/blog"
+                  className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                  aria-label="All posts"
+                >
+                  All Posts &rarr;
+                </Link>
+              </div>
+            )}
           </div>
           <div className="hidden h-full min-w-[280px] max-w-[280px] flex-wrap overflow-auto sm:flex">
             Highlights
           </div>
         </div>
       </div>
-      {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
-          <Link
-            href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="All posts"
-          >
-            All Posts &rarr;
-          </Link>
-        </div>
-      )}
     </>
   )
 }
