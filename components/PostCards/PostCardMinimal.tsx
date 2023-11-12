@@ -14,7 +14,6 @@ interface PostProps {
 }
 
 export default function PostCardMinimal(post: PostProps) {
-  console.log(post)
   return (
     <div>
       <div key={post.path} className="m-2">
